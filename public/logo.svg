@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Purple V -->
+  <path d="M100 100 L250 400 L400 100" fill="none" stroke="#663399" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gold Banner -->
+  <path d="M150 200 C200 150 300 150 350 200 S450 250 500 250" fill="#FFA500" stroke="none"/>
+</svg>

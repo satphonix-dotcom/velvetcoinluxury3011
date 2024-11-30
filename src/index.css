@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... (keep existing styles) ... */
+
+/* Product Card Styles */
+.product-card {
+  @apply relative overflow-hidden;
+}
+
+.product-card-image {
+  @apply transition-transform duration-700 ease-out;
+}
+
+.product-card:hover .product-card-image {
+  @apply scale-105;
+}
+
+.product-card-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-luxury-black/80 to-transparent opacity-0
+         transition-opacity duration-300;
+}
+
+.product-card:hover .product-card-overlay {
+  @apply opacity-100;
+}
+
+/* Line Clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ... (keep remaining styles) ... */

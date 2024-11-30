@@ -1,0 +1,24 @@
+[build]
+  command = "CI=false npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  CI = "false"
+  REACT_APP_API_URL = "/.netlify/functions"
+  MONGODB_URI = "mongodb+srv://velvetcoin:kOttRhqm7Bq5DcN2@cluster0.jkfoj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  JWT_SECRET = "70a4be0c2a1c347a4c22d8a210920b5933f8eaa7f91db825bc11d58594ac3ee0169c3135dcfa79ffa878632cba2c95a41b6e4645154b1001ba264d3cf1478f38afffe8a0a8837bb5928d7a83cb16327512583cf883fd180b541cca8e333bf771ee88b1540b7ecf8dd2bfb5b3459489dea6067f482093beff023bb01b390d972127e708080deb7a247b096e34983100d077569633a0db594474b0bf58230dcbc7b43bb954f66d1981ce3eb29da75cb114450d540e5d6c457c965bf0dea1b17721eb9f46bb25794739c9b3dd78b7088d11791e8f7357dc32cdb3f4435e32ac327051c57245b275c5ac9179f7e5408f31270cb317a9a677340387ed939484b4f840"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; connect-src 'self' https: wss: /.netlify/functions;"
